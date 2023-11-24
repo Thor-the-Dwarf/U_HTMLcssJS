@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 1</title>
+</head>
+<body style="
+    background-color: black;
+    color: white;
+">
+<div>
+    <h1>Hier lernst du margin, padding und border kennen</h1>
+    <p>
+        In dieser Aufgabe geht es darum zu verstehen wie sich margin, padding und border auf Elemente auswirken. <br>
+        <strong style="
+            font-weight: bold;
+            font-size: larger;
+            color: yellow;
+        ">
+            Der graue Container mit der weißen Border ist das Element das du in dieser Aufgabe beeinflusst.
+        </strong> <br>
+        Er ist innerhalb eines schwarzen Containers positioniert und beinhaltet wiederum einen orangenen Container. <br>
+        In der Praxis könnte der orangene Container ein Bild oder ein Text sein. <br>
+        <strong style="
+            font-weight: bold;
+            font-size: larger;
+            color: yellow;
+        ">
+            Verändere dabei nur die Zahlenwerte innerhalb der Spielwiese..
+        </strong> <br>
+    </p>
+    <h3>Aufgabe:</h3>
+    <ol id="checkboxList2"
+        style="display: flex; flex-direction: column; gap: 20px;">
+        <li>
+            <input type="checkbox">
+            kopiere dir folgenden Code in die Datei positionierung.html im Ordner Positionierung. <br>
+            erstelle diesen Ordner falls notwendig.
+            <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=""&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;style&gt;
+        body {
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+            width: 2000px;
+            background: linear-gradient(to bottom right, black, white);
+        }
+        #container {  /* Abstand von links */
+            background-color: black;
+            width: 600px;
+            height: 600px;
+        }
+        #item{
+            border: 2px solid white;
+            background-color: darkslategrey;
+            width: 200px;
+            height: 200px;
+        }
+        #content {
+            background-color: coral;
+            width: 10px;
+            height: 10px;
+        }
+
+        /*<<<<<<<<<<<<<<<< Spielwiese >>>>>>>>>>>>>>>>*/>
+        #container{
+            position: static;   /*default Wert*/
+            top: 0px;
+            left: 0px;
+        }
+        #item{
+            position: relative; /*relativ zum Parent*/
+            top: 200px;
+            left: 200px;
+        }
+        #content{
+            position: fixed;    /*Parent ist der Bildschirm selbst*/
+            top: 300px;
+            left: 300px;
+        }
+        /*<<<<<<<<<<<<<<<< Spielwiese >>>>>>>>>>>>>>>>*/
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="container"&gt;
+    &lt;div id="item"&gt;
+        &lt;div id="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </code>
+    </pre>
+        </li>
+        <li>
+            <input type="checkbox">
+            "position: fixed" ist besonders geeignet für Menüleisten. Scrolle einmal runter und wieder rauf. <br>
+        </li>
+        <li>
+            <input type="checkbox">
+            Default lässt HTML es nicht zu das Elemente eine andere position erhalten. Alle Elemente sind default mit
+            <br> der property "position: static" ausgestattet. Deswegen muss die property "position" irgend einen <br>
+            anderen Wert als "static" erhalten. <br>
+            Setze zuerst bei #container die Werte "top" und "left" auf 500px um festzustellen das HTML das verhindert. <br>
+            Ändere daher den "position" wert bei #container zu "absolut".
+        </li>
+        <li>
+            <input type="checkbox">
+            Wenn du damit fertig bist die left, top, right, und bottom -properties zu testen, <br>
+            mach ein div mit folgenden properties: blau, 50px hoch und breit, position: absolute #z-Container.
+            und füge das neue div unter den bestehenden Code in den body. Positioniere es so das es optisch über dem <br>
+            schwarzen container ist. jetzt gib dem #z-container die property z-index: -1.
+        </li>
+        <li id="hiddenLi" style="display: none;">
+            <pre>
+                  .__                            __
+      ______ ____ |  |_________     ____  __ ___/  |_
+     /  ___// __ \|  |  \_  __ \   / ___\|  |  \   __\
+     \___ \\  ___/|   Y  \  | \/  / /_/  >  |  /|  |
+    /____  >\___  >___|  /__|     \___  /|____/ |__|
+         \/     \/     \/        /_____/
+    </pre>
+        </li>
+    </ol>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+</body>
+</html>
+
+<script>
+    // Funktion zum Überprüfen, ob alle Checkboxen ausgewählt sind
+    function checkCheckboxes() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const submitButton = document.getElementById('hiddenLi');
+
+        // Überprüfen, ob alle Checkboxen ausgewählt sind
+        const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
+
+        // Wenn alle Checkboxen ausgewählt sind, den Button anzeigen, sonst ausblenden
+        if (allChecked) {
+            submitButton.style.display = 'block';
+            submitButton.disabled = false;
+        } else {
+            submitButton.style.display = 'none';
+            submitButton.disabled = true;
+        }
+    }
+
+    // Event Listener für Änderungen in den Checkboxen
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', checkCheckboxes);
+    });
+</script>

@@ -1,0 +1,31 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 20px;
+
+    /*flex-start*/
+    /*justify-content: flex-start;    !*Anzeige beginnt links*!*/
+    /*align-content: flex-start;      !*Anzeige beginnt oben*!*/
+
+    /*flex-end*/
+    /*justify-content: flex-end;      !*Anzeige beginnt rechts*!*/
+    /*align-content: flex-end;        !*Anzeige beginnt unten*!*/
+
+    /*center*/
+    /*justify-content: center;        !*Anzeige ist horizontal zentriert*!*/
+    /*align-content: center;          !*Anzeige ist vertikal zentriert*!*/
+
+    /*space-between*/
+    /*justify-content: space-between;     !*Der Selbe Platz ist zwischen den Child-Elementen Horizontal*!*/
+    /*align-content: space-between;   !*Der Selbe Platz ist zwischen den Child-Elementen vertikal*!*/
+
+    /*space-around*/
+    /*justify-content: space-around;  !*Child-Elemente bekommen die selbe margin rechts und links *!*/
+    /*align-content: space-around;    !*Child-Elemente bekommen die selbe margin oben und unten *!*/
+
+    /*space-evenly*/
+    justify-content: space-evenly;  /*Child-Elemente sind gleichmaessig verteilt, horizontal*/
+    align-content: space-evenly;    /*Child-Elemente sind gleichmaessig verteilt, vertikal*/
+
+}

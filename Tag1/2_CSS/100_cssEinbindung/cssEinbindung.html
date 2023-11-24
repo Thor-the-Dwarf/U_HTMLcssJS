@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline Styles Demo</title>
+<!-- Externes Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="cssEinbindung.css">
+
+    <!--Internes Stylesheet-->
+    <style>
+        #internesDiv{
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 50px;
+            color:white;
+            background-color: blue;
+        /*  Da der code von oben nach unten gelesen wird kann man überschreiben*/
+        /*    background-color: green;*/
+        }
+    </style>
+
+</head>
+<body>
+<div id="externesDiv">
+    <p>Externes Stylesheet</p>
+</div>
+
+<div id="internesDiv">
+    <!--    Inline-Stil überschreibt das interne Stylesheet-->
+    <!--style="background-color: red"-->
+    <p>Internes Stylesheet</p>
+</div>
+
+<div style=" width: 300px; height: 400px; background-color: red;">
+    <p>Inline Stil</p>
+</div>
+
+
+
+</body>
+</html>

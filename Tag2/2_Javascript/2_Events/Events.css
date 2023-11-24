@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+
+#clickDiv {
+    background-color: red;
+}
+
+#hoverDiv {
+    background-color: green;
+}
+
+#doubleClickDiv {
+    background-color: blue;
+}
+
+#mouseOutDiv {
+    background-color: orange;
+}

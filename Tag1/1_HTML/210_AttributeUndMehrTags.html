@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Anker Tag
+der Inhalt des Anker Tags leitet an eine andere Seite weiter
+-->
+<a href="1_4_Tagverschachtelung.html">
+    <button>das ist ein Button</button>
+</a>
+<br>
+
+<form action="/Tag1/1_HTML/200_Tags.htmlgs.html" method="post">
+<!--einem Label bei einer Label + input kombination gibt man immer einen Namen
+    fuer Menschen mit Screenreader. Und es sorgt dafür das wenn man auf das Label
+    drückt, der Cursor im Input gesetzt wird.-->
+    <label for="email">email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+
+    <label for="password">password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+
+    <input type="submit" value="submit">
+</form>
+
+<input type="checkbox">
+<input type="radio">
+<input type="range">
+<input type="date">
+
+
+<label for="browserDropdown">Wähle einen Browser:</label>
+<input list="osList" id="browserDropdown" name="browserDropdown">
+
+<datalist id="osList">
+    <option value="Microsoft">
+    <option value="macOS">
+    <option value="Linux">
+    <option value="Android">
+    <option value="IOS">
+</datalist>
+
+</body>
+</html>
+

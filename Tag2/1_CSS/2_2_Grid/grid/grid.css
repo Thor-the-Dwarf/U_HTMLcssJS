@@ -1,0 +1,42 @@
+.grid-container{
+    display: grid;
+
+    /*template-columns*/
+    grid-template-columns: 100px  100px;   /* die Anzahl der Werte bestimmt die anzahl der Spalten und deren Höhe*/
+
+    /*template-rows*/
+    grid-template-rows: 100px  100px;      /* die Anzahl der Werte bestimmt die anzahl der Reihen und deren Breite*/
+
+    /*grid-auto-flow*/
+    /*grid-template-columns: 100px 100px;*/
+    /*grid-template-rows: 100px 100px;*/
+    /*grid-auto-flow: row;             !*bestimmt wo Elemente die zu viel für die Gridplaetze sind eingeordnet werden*!*/
+
+    /*fractions*/
+    /*5fr ist 5 mal so groß wie 1fr*/
+    /*8fr ist 4 mal so groß wie 2fr*/
+    /*grid-template-columns: 1fr 2fr 3fr;     !* Höhe passt sich dem Bildschirm an*!*/
+    /*grid-template-rows: 1fr 2fr 3fr;        !* Breite passt sich dem Bildschirm an*!*/
+
+    /*auto-columns*/
+    /*grid-auto-columns: 50px;                     !*generiert automatisch Spalten die dem Wert entsprechend breit sind*!*/
+    /*auto-rows*/
+    /*grid-auto-rows: 50px;                        !*generiert automatisch Reihen die dem Wert entsprechend breit sind*!*/
+
+    /*gap*/
+    /*grid-template-columns: 100px 100px 100px;*/
+    /*grid-template-rows: 100px 100px 100px;*/
+    /*gap: 15px;                                    !*sorgt für abstand zwischen den Spalten und Reihen*!*/
+
+    /*column-gap*/
+    /*grid-template-columns: 100px 100px 100px;*/
+    /*grid-template-rows: 100px 100px 100px;*/
+    /*column-gap: 10px;                             !*sorgt für abstand zwischen den Spalten*!*/
+
+    /*row-gap*/
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    row-gap: 10px;                               /*sorgt für abstand zwischen den Spalten*/
+}
+
+

@@ -1,0 +1,28 @@
+<!--Dateiname:Botseite.html-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Webseite</title>
+    <link rel="stylesheet" href="Botseite.css">
+    <script src="Botseite.js"></script>
+    <script>
+        // Initialisiere den ChatBot, wenn die Seite geladen wird
+        window.onload = initializeChatBot;
+    </script>
+</head>
+<body>
+<div id="chat-container">
+    <div id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Antwort...">
+    <button onclick="userMessage()">Senden</button>
+</div>
+
+<script>
+    // Füge die Begrüßungsnachricht hinzu
+    // appendMessage('bot', 'Herzlich willkommen bei VSP!');
+</script>
+</body>
+</html>

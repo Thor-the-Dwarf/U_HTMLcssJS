@@ -1,0 +1,28 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 20px;
+    grid-template-areas:
+    "gridID1 gridID1 gridID2"
+    "gridID4 gridID5 gridID2"
+    "gridID4 gridID3 gridID3"
+    ;
+}
+.element1{
+    grid-area: gridID1;
+}
+.element2{
+    grid-area: gridID2;
+}
+.element3{
+    grid-area: gridID3;
+}
+.element4{
+    grid-area: gridID4;
+}
+.element5{
+    grid-area: gridID5;
+}
+
+

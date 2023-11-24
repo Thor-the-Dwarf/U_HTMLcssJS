@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+            width: 2000px;
+            background: linear-gradient(to bottom right, black, white);
+            color:white;
+            font-size: 28px;
+        }
+        #container {
+            background-color: black;
+            width: 600px;
+            height: 600px;
+        }
+        #item{
+            border: 2px solid white;
+            background-color: darkslategrey;
+            width: 400px;
+            height: 400px;
+        }
+        #content {
+            background-color: coral;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Wenn #container static ist */
+        /* 'static' ist der Standardwert. top, left, right, bottom haben keinen Effekt. */
+        /*#container {*/
+        /*    position: static;*/
+        /*    top: 500px;*/
+        /*    left: 250px;*/
+        /*}*/
+
+        /* Wenn #container absolute ist */
+        /* 'absolute' positioniert ein Element absolut zum nächsten nicht-statischen Elternelement. */
+        #container {
+            position: absolute;
+            top: 500px;
+            left: 250px;
+        }
+
+        /* 'relative' positioniert ein Element relativ zu seiner normalen Position */
+        #item {
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        /* 'fixed' positioniert ein Element relativ zum Browserfenster */
+        #content {
+            position: fixed;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"> position: static oder absolute
+    <div id="item">position: relative
+        <div id="content">position: fixed</div>
+    </div>
+</div>
+</body>
+</html>

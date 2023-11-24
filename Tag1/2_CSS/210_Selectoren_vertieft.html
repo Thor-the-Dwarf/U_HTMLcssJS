@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Selektoren Vertieft</title>
+    <style>
+
+        /* Typ-Selektor */
+        div { /* greift für alle div-Elemente */
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+        }
+
+        /* Class-Selektor */
+        .klasse {                           /* greift für alle Elemente mit der Klasse .nachfahre */
+            background-color: yellow;
+        }
+
+        /*Descendant Selector*/
+        div .klasse {                       /* ist ein Element der Klasse .klasse in einem div, greift der Selektor */
+            background-color: white;
+        }
+
+        /* Kind-Selektor */
+        div h2 {                            /* ist ein h2 in einem div, greift der Selektor */
+            background-color: crimson;
+        }
+
+        /* Geschwister-Selektor */
+        h3 + p {                            /* greift beim ersten p, das direkt nach einem h3 kommt */
+            background-color: cyan;
+        }
+
+        /* Allgemeiner Geschwister-Selektor */
+        h4 ~ p {                            /* greift bei allen p, die nach einem h4 kommen */
+            background-color: yellow;
+        }
+
+        /* Attribut-Selektor */
+        span[title] {                       /* greift, wenn das Element das richtige Attribut hat */
+            background-color: purple;
+            font-size: 20px;
+        }
+
+        /* Attributwert-Selektor mit Wert */
+        span[title="keyword"] {         /* greift, wenn das Element das richtige Attribut mit dem richtigen Wert hat */
+            background-color: coral;
+        }
+
+    </style>
+
+</head>
+<body style="background-color: black;">
+<div style="
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 200px;
+            gap: 8px;
+">
+    <div>
+        <h1 class="klasse">Klassen Selector</h1>
+        <h5>ohne Selector</h5>
+        <h5 class="klasse">Klassen Selector</h5>
+    </div>
+    <div>
+        <h2>Kind-Selektor</h2>
+        <h2>Kind-Selektor</h2>
+    </div>
+    <div>
+        <h3>Geschwister-Selektor</h3>
+        <p>Geschwister-Selektor</p>
+        <p>Geschwister-Selektor</p>
+    </div>
+    <div>
+        <h4>genereller Geschwister Selektor</h4>
+        <p>genereller Geschwister Selektor</p>
+        <p>genereller Geschwister Selektor</p>
+    </div>
+    <div><span title="HTML-Attribut">Attribut-Selecor</span></div>
+    <div>
+        Lorem ipsum dolor<span title="keyword">Attribut-Selecor mit richtigem wert</span> sit amet,
+        eirmod tempor invidunt <span title="HTML-Attribut">Attribut-Selecor mit falschem wert</span>
+        ut labore et dolore magna aliquyam erat, eirmod tempor invidunt. Lorem ipsum dolor
+    </div>
+</div>
+
+</body>
+</html>

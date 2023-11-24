@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Inline JavaScript -->
+<button onclick="alert('Inline: Hallo Welt!')">Inline Klick mich!</button>
+
+<!-- Interne JavaScript-Funktion -->
+<button onclick="sayHello()">Interne Klick mich!</button>
+
+<!-- Button zum Ändern der Div-Farbe -->
+<button onclick="toggleColor()">Farbe wechseln</button>
+
+<!-- Beispiel für die Manipulation von CSS mit JavaScript -->
+<div id="myDiv"></div>
+
+<!-- Interne (eingebettete) JavaScript -->
+<script>
+    // Interne Funktion
+    function sayHello() {
+        alert('Interne: Hallo Welt!');
+    }
+    const a = document.getElementById("Id-des-Tags");
+</script>
+
+<!-- Einbinden der externen JavaScript-Datei -->
+<script src="090_JS_einbinden.js"></script>
+
+</body>
+</html>
+
+

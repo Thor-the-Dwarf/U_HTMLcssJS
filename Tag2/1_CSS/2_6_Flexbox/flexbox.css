@@ -1,0 +1,42 @@
+
+#flexbox{
+    border: 2px solid white;
+    height: 1500px;
+    width: 1500px;
+
+    display: flex;
+
+    /*direction*/
+    /*flex-direction: row;    !*Defaultwert - children ordnen sich in einer Reihe an*!*/
+    /*flex-direction: column;     !*children ordnen sich in einer Spalte an*!*/
+    /*flex-direction: row-reverse;    !*children ordnen sich in der Reihe in umgekehrter reihenfolge an*!*/
+    /*flex-direction: column-reverse; !*children ordnen sich in der Spalte in umgekehrter reihenfolge an*!*/
+
+    /*##### Bei jedem der folgenden Steps auch die flex-direction: column demonstrieren*/
+
+    /*justify-content: space + X*/
+    /*justify-content: space-around;  !*children bekommen mehr Raum*!*/
+    /*justify-content: space-between;  !*zwischenraum wird maximal genutzt*!*/
+    /*justify-content: space-evenly;  !*zwischenraum wird gleichmäßg verteilt*!*/
+
+    /*justify-content | Horizontale Anordnung*/
+    /*justify-content: flex-start; !*Defaultwert -  children werden von links angeordnet*!*/
+    /*justify-content: flex-end; !*children werden von rechts angeordnet*!*/
+    /*justify-content: center; !*children werden von zentral angeordnet*!*/
+
+
+    /*align-items | vertikale Anordnung*/
+    /*align-items: flex-start; !*Defaultwert -  children werden von links angeordnet*!*/
+    /*align-items: flex-end; !*children werden von rechts angeordnet*!*/
+    /*align-items: center; !*children werden von zentral angeordnet*!*/
+
+    /*flex-wrap*/
+    height: 50%;
+    width: 50%;
+    /*flex-wrap: nowrap;  !*Defaultwert keine neuanordnung der children bei vareirender Bildschirmgröße*!*/
+    flex-wrap: wrap;    /*neuanordnung der children bei vareirender Bildschirmgröße*/
+
+}
+
+
+

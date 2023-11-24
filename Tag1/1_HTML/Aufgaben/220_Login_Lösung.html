@@ -1,0 +1,34 @@
+<!--Du sollst ein einfaches Login-Formular erstellen, das den Benutzer nach erfolgreichem Login auf eine andere Webseite weiterleitet.-->
+
+<!--Erstelle eine neue HTML-Datei.-->
+<!--Füge einen Titel und eine Überschrift hinzu, zum Beispiel: "Login-Seite".-->
+<!--Verwende das <form> Tag, um das Formular zu erstellen.-->
+<!--    Füge zwei Eingabefelder (<input>) für Benutzername und Passwort hinzu. Setze für beide das Attribut required.-->
+<!--    Füge einen "Submit"-Button hinzu.-->
+<!--    Verwende das action Attribut im <form> Tag, um den Benutzer nach dem Absenden des Formulars auf eine andere
+Webseite zu leiten (zum Beispiel Google).-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Login-Seite</title>
+</head>
+<body>
+
+<h1>Login-Seite</h1>
+
+<form action="https://www.google.com" method="post">
+  <label for="username">E-Mail:</label>
+  <input type="text" id="username" name="username" required>
+  <br>
+
+  <label for="password">Passwort:</label>
+  <input type="password" id="password" name="password" required>
+  <br>
+
+  <input type="submit" value="Einloggen">
+</form>
+
+</body>
+</html>

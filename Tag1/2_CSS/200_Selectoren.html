@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Selektoren</title>
+    <style>
+    /*
+        todo DAS KOMMENTAR HIER SCHREIBEN WIR NATÜRLICH ERST AM ENDE WIR WOLLEN JA NICHT SPOILERN
+        Es gibt eine Hierarchie unter Selektoren.
+        der spezifischere Selektor setzt sich durch
+    */
+
+        /*typ-Selector*/
+        div {
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            background-color: green;
+        }
+        .class-selektor {
+            background-color: blue;
+        }
+        #id-selektor {
+            background-color: red;
+        }
+        /*group-Selector*/
+        div, #id-selektor, .class-selektor {
+            background-color: orange;
+        }
+        /*universal-Selector*/
+        * { background-color: darkslategrey; }
+    </style>
+</head>
+<body>
+
+<div class="class-selektor">class-selektor</div>
+<div class="class-selektor">class-selektor</div>
+<div id="id-selektor">id-selektor</div>
+<div></div>
+
+</body>
+</html>

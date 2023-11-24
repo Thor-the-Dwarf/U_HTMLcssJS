@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Box-Model</title>
+    <link rel="stylesheet" href="Startseite.css">
+    <style>
+        .box{
+            text-align: center;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        row{
+            display: flex;
+            flex-direction: row;
+        }
+        .border{
+            border: 2px dashed white;
+        }
+        .black{
+            background-color: black
+        }
+        .grey{
+            background-color: darkslategrey;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-color: black">
+<h1 style="color: white; text-align: center">Box-Model</h1>
+<div>
+    <div style="background-color: darkslategrey; padding: 24px; width: 80%; height: 80%; margin: 50px;">
+        <div class="box border">
+            <p>↑    margin  ↑</p>
+            <div class="box black">
+                <p style="color: white;">border</p>
+                <div class="box grey">
+                    <p>↓    padding     ↓</p>
+                    <div class="box border">
+                        <p>content</p>
+                    </div>
+                    <p>↑    ↑   ↑</p>
+                </div>
+                <p style="color: black;">&larr;</p>
+            </div>
+            <p>↓    ↓    ↓    </p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

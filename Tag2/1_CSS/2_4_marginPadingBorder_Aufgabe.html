@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 1</title>
+</head>
+<body style="
+    background-color: black;
+    color: white;
+">
+<div>
+    <h1>Hier lernst du margin, padding und border kennen</h1>
+    <p>
+        In dieser Aufgabe geht es darum zu verstehen wie sich margin, padding und border auf Elemente auswirken. <br>
+        <strong style="
+            font-weight: bold;
+            font-size: larger;
+            color: yellow;
+        ">
+            Der graue Container mit der weißen Border ist das Element das du in dieser Aufgabe beeinflusst.
+        </strong> <br>
+        Er ist innerhalb eines schwarzen Containers positioniert und beinhaltet wiederum einen orangenen Container. <br>
+        In der Praxis könnte der orangene Container ein Bild oder ein Text sein. <br>
+        <strong style="
+            font-weight: bold;
+            font-size: larger;
+            color: yellow;
+        ">
+            Verändere dabei nur die Zahlenwerte innerhalb der Spielwiese..
+        </strong> <br>
+    </p>
+    <h3>Aufgabe:</h3>
+    <ol id="checkboxList2">
+        <li>
+            <input type="checkbox">
+            kopiere dir folgenden Code in die Datei margin_padding_border.html
+            <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=""&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;style&gt;
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, black, white);
+        }
+        #container {
+            background-color: black;
+            position: fixed;
+            width: 600px;
+            height: 600px;
+        }
+        #content {
+            background-color: coral;
+            width: 10px;
+            height: 10px;
+        }
+        #item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px solid white;
+            background-color: darkslategrey;
+            width: 50px;
+            height: 50px;
+
+<span style="color: yellow">
+            /* &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;Spielwiese&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; */
+</span>
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+
+            border: 2px solid white;
+
+            padding-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+
+<span style="color: yellow">
+            /* &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;Spielwiese&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; */
+</span>
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id="container"&gt;
+    &lt;div id="item"&gt;
+        &lt;div id="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+        </li>
+        <li>
+            <input type="checkbox">
+            Lasse margin, padding und border an den entsprechenden Stellen so dick werden, <br>
+            dass sich das Item (grauer Container) optisch in der unteren linken Ecke befindet
+        </li>
+        <li>
+            <input type="checkbox">
+            Lasse margin, padding und border an den entsprechenden Stellen so dick werden, <br>
+            dass sich der Content (orangener Container) optisch unten in der Mitte des Items ist.
+        </li>
+        <li>
+            <input type="checkbox">Setze die Border Stärke auf 10px und platziere das Item zentral im schwarzen <br>
+            Container und den Content zentral im Item
+        </li>
+        <li>
+            <input type="checkbox">Gib dem Item eine margin-top und eine padding-top von jeweils 300px.
+        </li>
+        <li id="hiddenLi" style="display: none;">
+            <h1>(>'.')> Good Job! <('.'<)</h1>
+        </li>
+    </ol>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+</body>
+</html>
+
+<script>
+    // Funktion zum Überprüfen, ob alle Checkboxen ausgewählt sind
+    function checkCheckboxes() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const submitButton = document.getElementById('hiddenLi');
+
+        // Überprüfen, ob alle Checkboxen ausgewählt sind
+        const allChecked = [...checkboxes].every(checkbox => checkbox.checked);
+
+        // Wenn alle Checkboxen ausgewählt sind, den Button anzeigen, sonst ausblenden
+        if (allChecked) {
+            submitButton.style.display = 'block';
+            submitButton.disabled = false;
+        } else {
+            submitButton.style.display = 'none';
+            submitButton.disabled = true;
+        }
+    }
+
+    // Event Listener für Änderungen in den Checkboxen
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', checkCheckboxes);
+    });
+</script>
